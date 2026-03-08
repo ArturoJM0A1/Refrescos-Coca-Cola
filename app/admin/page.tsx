@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 
 type ProductoApi = {
@@ -26,7 +27,7 @@ type ProductoNuevo = {
 const EMPTY_NEW_PRODUCT: ProductoNuevo = {
   nombre: "",
   descripcion: "",
-  imagen: "/coca600.png",
+  imagen: "/defaultcoca.png",
   activo: true,
   precio_unitario: 0,
   precio_paquete: 0
@@ -50,6 +51,7 @@ async function parseError(response: Response, fallback: string) {
 }
 
 export default function AdminPage() {
+  const router = useRouter();
   const [productos, setProductos] = useState<ProductoApi[]>([]);
   const [loading, setLoading] = useState(true);
   const [savingIds, setSavingIds] = useState<Set<number>>(new Set());
@@ -66,6 +68,11 @@ export default function AdminPage() {
       try {
         const response = await fetch("/api/productos", { cache: "no-store" });
 
+        if (response.status === 401) {
+          router.push("/login?next=/admin");
+          return;
+        }
+
         if (!response.ok) {
           throw new Error("No se pudieron cargar productos.");
         }
@@ -81,9 +88,22 @@ export default function AdminPage() {
     }
 
     loadProductos();
-  }, []);
+  }, [router]);
 
   const totalProductos = useMemo(() => productos.length, [productos]);
+  async function logout() {
+    setNotice("");
+    setError("");
+
+    try {
+      await fetch("/api/auth/logout", { method: "POST" });
+    } catch (logoutError) {
+      console.error(logoutError);
+    } finally {
+      router.push("/login");
+      router.refresh();
+    }
+  }
 
   function markSaving(id: number, isSaving: boolean) {
     setSavingIds((current) => {
@@ -311,6 +331,12 @@ export default function AdminPage() {
       <p className="subtitle">
         Administra catalogo completo. Productos registrados: {totalProductos}.
       </p>
+
+      <div className="admin-top-actions">
+        <button type="button" className="secondary" onClick={() => void logout()}>
+          Cerrar sesion
+        </button>
+      </div>
 
       <section className="admin-item create-item">
         <h3>Crear producto nuevo</h3>
@@ -552,6 +578,11 @@ export default function AdminPage() {
     </main>
   );
 }
+
+
+
+
+
 
 
 

@@ -31,9 +31,11 @@ export default async function TiendaPage() {
 
       <section className="hero" id="inicio">
         <div className="hero-copy">
-          <p className="kicker">Sabor que refresca</p>
+          
+            <p className="kicker"><b>Sabor que refresca</b></p>
+          
           <h1>Venta de refrescos Coca-Cola</h1>
-          <p className="subtitle">Precios vigentes por unidad y por paquete de 12 piezas.</p>
+          <p className="kicker">Precios vigentes por unidad y por paquete de 12 piezas.</p>
         </div>
 
         <div className="hero-image-wrap glass">
