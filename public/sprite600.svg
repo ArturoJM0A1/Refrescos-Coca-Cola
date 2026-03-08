@@ -1,0 +1,7 @@
+﻿<svg width="400" height="320" viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="320" fill="#f3f5f9"/>
+  <rect x="138" y="58" width="124" height="205" rx="18" fill="#00a74a"/>
+  <rect x="160" y="34" width="80" height="30" rx="10" fill="#00803a"/>
+  <text x="200" y="166" text-anchor="middle" fill="#ffffff" font-size="34" font-family="Arial, sans-serif">Sprite</text>
+  <text x="200" y="198" text-anchor="middle" fill="#ffffff" font-size="24" font-family="Arial, sans-serif">600ml</text>
+</svg>

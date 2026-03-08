@@ -1,0 +1,162 @@
+:root {
+  color-scheme: light;
+  --bg: #f7f8fb;
+  --card: #ffffff;
+  --text: #21242c;
+  --subtle: #5f6472;
+  --border: #dfe3eb;
+  --accent: #d71920;
+  --accent-soft: #fcedee;
+  --success: #136f3a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #fff 0%, var(--bg) 48%);
+  color: var(--text);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 32px 20px 40px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+p.subtitle {
+  margin: 0;
+  color: var(--subtle);
+}
+
+.grid {
+  margin-top: 24px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 6px 18px rgb(19 32 68 / 7%);
+}
+
+.card img {
+  width: 100%;
+  height: 170px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #eceff4;
+}
+
+.card h2 {
+  margin: 12px 0 6px;
+  font-size: 1.08rem;
+}
+
+.price {
+  margin: 0;
+  color: #1d2233;
+}
+
+.price + .price {
+  margin-top: 4px;
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 12px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+.actions {
+  margin-top: 18px;
+}
+
+.actions a {
+  color: #1f4aa1;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.admin-grid {
+  margin-top: 22px;
+  display: grid;
+  gap: 14px;
+}
+
+.admin-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.admin-item h3 {
+  margin: 0 0 14px;
+}
+
+.form-row {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: var(--subtle);
+}
+
+input[type="number"] {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 8px 10px;
+  font-size: 1rem;
+}
+
+button {
+  margin-top: 12px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--accent);
+  color: white;
+  padding: 9px 14px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.notice {
+  margin-top: 12px;
+  color: var(--success);
+  font-size: 0.9rem;
+}
+
+.error {
+  margin-top: 12px;
+  color: #a72020;
+  font-size: 0.9rem;
+}

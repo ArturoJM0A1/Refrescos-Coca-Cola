@@ -1,0 +1,7 @@
+﻿<svg width="400" height="320" viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="320" fill="#f3f5f9"/>
+  <rect x="126" y="50" width="148" height="220" rx="30" fill="#d71920"/>
+  <rect x="168" y="24" width="64" height="32" rx="8" fill="#b01218"/>
+  <text x="200" y="166" text-anchor="middle" fill="#ffffff" font-size="34" font-family="Arial, sans-serif">Coca</text>
+  <text x="200" y="202" text-anchor="middle" fill="#ffffff" font-size="28" font-family="Arial, sans-serif">2L</text>
+</svg>
