@@ -6,35 +6,35 @@ const productos = [
   {
     id: 1,
     nombre: "Coca Cola 600ml",
-    imagen: "/coca600.svg",
+    imagen: "/coca600.png",
     precioUnitario: 18,
     precioPaquete: 160
   },
   {
     id: 2,
     nombre: "Coca Cola 2L",
-    imagen: "/coca2l.svg",
+    imagen: "/coca2l.png",
     precioUnitario: 38,
     precioPaquete: 420
   },
   {
     id: 3,
     nombre: "Sprite 600ml",
-    imagen: "/sprite600.svg",
+    imagen: "/sprite600.png",
     precioUnitario: 17,
     precioPaquete: 150
   },
   {
     id: 4,
     nombre: "Fanta Naranja 600ml",
-    imagen: "/fanta600.svg",
+    imagen: "/fanta600.png",
     precioUnitario: 17,
     precioPaquete: 150
   },
   {
     id: 5,
     nombre: "Fresca Toronja 600ml",
-    imagen: "/fresca600.svg",
+    imagen: "/fresca600.png",
     precioUnitario: 16,
     precioPaquete: 145
   }
