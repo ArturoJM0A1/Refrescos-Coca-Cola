@@ -10,7 +10,9 @@ datasource db {
 model Producto {
   id                 Int      @id @default(autoincrement())
   nombre             String
+  descripcion        String   @default("")
   imagen             String
+  activo             Boolean  @default(true)
   precioUnitario     Int      @map("precio_unitario")
   precioPaquete      Int      @map("precio_paquete")
   fechaActualizacion DateTime @default(now()) @updatedAt @map("fecha_actualizacion")
